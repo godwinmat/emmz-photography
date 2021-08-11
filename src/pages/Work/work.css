@@ -1,0 +1,138 @@
+.workContainer {
+	/* background-color: #222; */
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	align-items: flex-end;
+	overflow-x: hidden;
+}
+
+.wedding {
+	background-color: dodgerblue;
+}
+.creative {
+	background-color: blue;
+}
+.portrait {
+	background-color: forestgreen;
+}
+.children {
+	background-color: hotpink;
+}
+
+.imageContainer {
+	height: 90%;
+	width: 90%;
+	margin: 0 auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.imageContainer::-webkit-scrollbar {
+	display: none;
+}
+
+.firstImage {
+	width: 100%;
+	height: auto;
+	border-radius: 0 16px 0 16px;
+	object-position: top;
+}
+.leftIcon {
+	left: 90px;
+}
+.rightIcon {
+	right: 90px;
+}
+
+.chevIcon {
+	position: absolute;
+	width: 70px;
+	height: 70px;
+	cursor: pointer;
+	top: 50%;
+	transform: translateY(-50%);
+	z-index: 20;
+}
+
+.slide {
+	opacity: 0;
+	overflow: visible;
+}
+
+.slide.active {
+	opacity: 1;
+	animation: scale 12s;
+}
+
+@keyframes scale {
+	0% {
+		transform: scale(0.7);
+		opacity: 0;
+	}
+	50% {
+		transform: scale(0.55);
+		opacity: 1;
+	}
+	75% {
+		transform: scale(0.55);
+		opacity: 1;
+	}
+	100% {
+		transform: scale(0.7);
+		opacity: 0;
+	}
+}
+
+@media (max-width: 700px) {
+	.slide.active {
+		opacity: 1;
+		animation: scale 12s;
+	}
+
+	@keyframes scale {
+		0% {
+			transform: scale(1);
+			opacity: 0;
+		}
+		50% {
+			transform: scale(0.7);
+			opacity: 1;
+		}
+		75% {
+			transform: scale(0.7);
+			opacity: 1;
+		}
+		100% {
+			transform: scale(1);
+			opacity: 0;
+		}
+	}
+}
+
+@media (min-height: 758px) {
+	.slide.active {
+		opacity: 1;
+		animation: scale 12s;
+	}
+
+	@keyframes scale {
+		0% {
+			transform: scale(1.5);
+			opacity: 0;
+		}
+		50% {
+			transform: scale(1);
+			opacity: 1;
+		}
+		75% {
+			transform: scale(1);
+			opacity: 1;
+		}
+		100% {
+			transform: scale(1.5);
+			opacity: 0;
+		}
+	}
+}

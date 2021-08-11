@@ -1,0 +1,311 @@
+.container {
+	height: 100vh;
+	width: 100%;
+	font-family: "Times New Roman", Times, serif;
+	display: flex;
+	align-items: center;
+}
+
+.backgroundImage {
+	position: absolute;
+	top: 0;
+	left: 0;
+	object-fit: cover;
+	width: 100%;
+	height: 100%;
+	animation: fade-image 3s;
+}
+
+@keyframes fade-image {
+	from {
+		transform: scale(0.5);
+	}
+	to {
+		transform: scale(1);
+	}
+}
+
+.overlay {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background-color: rgba(14, 14, 59, 0.6);
+}
+
+.text {
+	position: absolute;
+	height: 50%;
+	width: 80%;
+	left: 40px;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	color: #fff;
+}
+
+.textLarge {
+	display: none;
+}
+
+.text .nameContainer {
+	overflow: hidden;
+	height: 50px;
+}
+
+.text .nameContainer p {
+	font-size: 45px;
+	font-weight: bold;
+	overflow: hidden;
+	padding-top: 0px;
+	animation: slide-from-bottom 2s;
+}
+
+.text .nameContainer p span {
+	color: rgb(184, 100, 41);
+}
+
+@keyframes slide-from-bottom {
+	0% {
+		padding-top: 50px;
+	}
+	100% {
+		padding-top: 0px;
+	}
+}
+
+.text .photodes {
+	font-size: 65px;
+	line-height: 70px;
+	color: rgba(184, 100, 41, 0.9);
+}
+
+.text .button {
+	display: inline-block;
+	color: #fff;
+	font-size: 25px;
+	padding: 15px 0px;
+	border: 1px solid #fff;
+	border-radius: 30px;
+	width: 200px;
+	height: 60px;
+	text-align: center;
+	animation: fade-in 2s;
+}
+
+.text .button:hover {
+	border-color: rgba(184, 100, 41, 0.9);
+	color: rgba(184, 100, 41, 0.9);
+}
+
+@keyframes fade-in {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@media (max-width: 1400px) {
+	.text .photodes {
+		font-size: 63px;
+	}
+}
+
+@media (max-width: 1320px) {
+	.text .photodes {
+		font-size: 60px;
+	}
+}
+
+@media (max-width: 1250px) {
+	.text {
+		width: 90%;
+		height: 50%;
+	}
+	.text .nameContainer p {
+		font-size: 40px;
+	}
+	.text .photodes {
+		font-size: 55px;
+		line-height: 50px;
+	}
+}
+
+@media (max-width: 1000px) {
+	.text {
+		height: 43%;
+	}
+	.text .photodes {
+		font-size: 50px;
+	}
+	.text .button {
+		width: 180px;
+		height: 55px;
+		padding: 12px 0px;
+	}
+}
+
+@media (max-width: 890px) {
+	.text {
+		left: 20px;
+	}
+	.text .photodes {
+		font-size: 45px;
+	}
+}
+@media (max-height: 640px) {
+	.text {
+		height: 52%;
+	}
+}
+
+@media (max-width: 780px) {
+	.text .photodes {
+		font-size: 40px;
+	}
+}
+
+@media (max-width: 670px) {
+	.text .photodes {
+		font-size: 37px;
+	}
+	.text .nameContainer {
+		overflow: auto;
+		height: auto;
+	}
+}
+
+@media (max-width: 600px) {
+	.text .photodes {
+		font-size: 35px;
+	}
+}
+
+@media (max-width: 560px) {
+	.text .nameContainer p {
+		font-size: 25px;
+	}
+	.text .photodes {
+		font-size: 33px;
+	}
+}
+
+@media screen and (width: 768px) and (height: 1024) {
+	.text {
+		display: none;
+	}
+}
+@media (max-width: 700px) {
+	.text {
+		display: none;
+	}
+	.textLarge {
+		font-family: sans-serif;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+		z-index: 20;
+		margin: auto;
+		width: 80%;
+		height: 50%;
+		color: #fff;
+		line-height: 70px;
+	}
+
+	.textLarge h1 {
+		font-size: 50px;
+		text-transform: uppercase;
+		font-weight: 750;
+	}
+	.textLarge p {
+		font-size: 23px;
+		line-height: 40px;
+	}
+	.textLarge button {
+		font-size: 25px;
+		text-transform: uppercase;
+		background-color: transparent;
+		border: 2px soilid rgb(230, 179, 84);
+		border-radius: 19px;
+		color: #fff;
+		padding: 20px 30px;
+		margin-top: 20px;
+	}
+}
+@media (min-width: 1620px), (min-height: 800px), (max-height: 590px) {
+	.text {
+		display: none;
+	}
+	.textLarge {
+		font-family: sans-serif;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+		z-index: 20;
+		margin: auto;
+		width: 80%;
+		height: 50%;
+		color: #fff;
+		line-height: 70px;
+	}
+
+	.textLarge h1 {
+		font-size: 60px;
+		text-transform: uppercase;
+		font-weight: 750;
+	}
+	.textLarge p {
+		font-size: 23px;
+		line-height: 40px;
+	}
+	.textLarge button {
+		font-size: 25px;
+		text-transform: uppercase;
+		background-color: transparent;
+		border: 2px soilid rgb(230, 179, 84);
+		border-radius: 19px;
+		color: #fff;
+		padding: 20px 30px;
+		margin-top: 20px;
+	}
+}
+
+@media (max-height: 590px) and (max-width: 700px) {
+	.textLarge h1 {
+		font-size: 45px;
+		font-weight: 750;
+	}
+
+	.textLarge button {
+		font-size: 22px;
+		padding: 10px 20px;
+		margin-top: 20px;
+	}
+}
+
+@media (max-width: 450px) {
+	.textLarge h1 {
+		font-size: 45px;
+	}
+	.textLarge button {
+		font-size: 22px;
+		padding: 10px 20px;
+		margin-top: 20px;
+	}
+}
+@media (max-width: 370px) {
+	.textLarge h1 {
+		font-size: 40px;
+	}
+	.textLarge button {
+		font-size: 17px;
+	}
+}

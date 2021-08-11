@@ -1,0 +1,194 @@
+.nav {
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 100;
+}
+
+.navContainer {
+	max-width: 95%;
+	margin: auto;
+	height: 60px;
+	padding-top: 4px;
+	display: flex;
+	color: #fff;
+	justify-content: space-between;
+}
+
+.logo {
+	opacity: 1;
+	width: 220px;
+	height: 50px;
+	object-position: top;
+	margin-top: 5px;
+}
+
+.ul {
+	display: flex;
+	font-family: "Times New Roman", Times, serif;
+	align-items: center;
+	width: 500px;
+	justify-content: space-around;
+}
+
+.hiddenDropDown {
+	display: none;
+}
+
+.chev {
+	width: 23px;
+	height: 23px;
+	position: absolute;
+	bottom: 0;
+}
+.chevContainer {
+	position: relative;
+}
+
+.dropDown {
+	position: relative;
+}
+
+.dropDownContent {
+	display: none;
+	flex-direction: column;
+	position: absolute;
+	background-color: #ddd;
+	width: 198px;
+	padding: 2px;
+	border-radius: 3px;
+}
+
+.dropDown:hover .dropDownContent {
+	display: flex;
+}
+
+.dropDownContent a {
+	color: #333;
+	font-size: 20px;
+	font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+	padding: 2px 0;
+}
+
+.dropDownContent a:hover {
+	background-color: burlywood;
+}
+
+.li {
+	padding-right: 80px;
+}
+
+.a {
+	color: #eee;
+	font-size: 27px;
+	font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+		"Lucida Sans", Arial, sans-serif;
+	font-style: italic;
+}
+
+.a:hover {
+	color: rgba(184, 100, 41);
+}
+
+.menu {
+	width: 40px;
+	height: 40px;
+	margin-top: 9px;
+	cursor: pointer;
+	display: none;
+}
+
+@media (max-width: 1100px) {
+	.logo {
+		width: 205px;
+		height: 45px;
+	}
+	.li {
+		padding-right: 60px;
+	}
+	.a {
+		font-size: 24px;
+	}
+}
+
+@media (max-width: 850px) {
+	.ul {
+		display: none;
+	}
+	.menu {
+		display: block;
+		position: relative;
+	}
+	.navContainer {
+		justify-content: space-between;
+	}
+
+	.nav.navOpen {
+		background-color: rgba(0, 0, 0, 0.85);
+	}
+
+	.navContainer.navOpen {
+		height: 100vh;
+		position: relative;
+		animation: slide-down 1s ease-in;
+	}
+
+	@keyframes slide-down {
+		from {
+			height: 60px;
+		}
+		to {
+			height: 100vh;
+		}
+	}
+
+	.navContainer.navOpen .ul {
+		display: flex;
+		flex-direction: column;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		width: 100%;
+		justify-content: space-around;
+		animation: fade-in 1.5s ease-in;
+	}
+
+	@keyframes fade-in {
+		0% {
+			opacity: 0;
+		}
+		50% {
+			opacity: 0;
+		}
+		100% {
+			opacity: 1;
+		}
+	}
+	.navContainer.navOpen .ul .a {
+		font-size: 30px;
+		padding: 40px 0;
+	}
+
+	.dropDown:hover .dropDownContent {
+		display: none;
+	}
+
+	.hiddenDropDown {
+		display: none;
+		color: #ddd;
+		font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+		font-size: 25px;
+		padding: 8px 0;
+	}
+
+	.hiddenDropDown.showHiddenDropDown {
+		display: block;
+	}
+}
+@media (max-width: 420px) {
+	.navContainer.navOpen .ul .li .a {
+		font-size: 17px;
+	}
+}
