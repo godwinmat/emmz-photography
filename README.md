@@ -1,4 +1,4 @@
-# Emmz Photography
+# Emmz Photography Portfolio 
 
 Building this for a friend who needed a portfolio for photography urgently. The project was built to improve my skills in front-end web development, particularly in creating responsive designs.
 
