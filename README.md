@@ -1,6 +1,6 @@
 # Emmz Photography
 
-This is for a friend. The project was built to improve my skills in front-end web development, particularly in creating responsive designs.
+Building this for a friend who needed a portfolio for photography urgently. The project was built to improve my skills in front-end web development, particularly in creating responsive designs.
 
 ## Technologies Used
 
