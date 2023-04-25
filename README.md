@@ -4,9 +4,7 @@ Building this for a friend who needed a portfolio for photography urgently. The 
 
 ## Technologies Used
 
-- HTML
-- CSS
-- JavaScript 
+- React
 
 ## Features
 - Responsive design that adapts to different screen sizes
